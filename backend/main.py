@@ -8,6 +8,7 @@ from jose import jwt
 from backend.app.utils.security import SECRET_KEY, ALGORITHM
 from backend.app.auth.router import auth_router
 from backend.app.routers.chat import chat_router
+from backend.app.routers.rules import rules_router
 from backend.app.models.user import User
 from backend.app.database import Base, engine, SessionLocal
 from backend.app.schemas.auth import TokenData
@@ -44,6 +45,7 @@ app.add_middleware(
 # Include routers
 app.include_router(auth_router)
 app.include_router(chat_router)
+app.include_router(rules_router)
 
 # Dependency
 def get_db():

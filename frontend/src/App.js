@@ -6,6 +6,7 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import Chat from './components/Chat';
+import Rules from './components/Rules/Rules';
 import Navbar from './components/Navbar';
 
 const theme = createTheme({
@@ -39,6 +40,14 @@ function App() {
                             element={
                                 <ProtectedRoute>
                                     <Chat />
+                                </ProtectedRoute>
+                            }
+                        />
+                        <Route
+                            path="/rules"
+                            element={
+                                <ProtectedRoute>
+                                    <Rules />
                                 </ProtectedRoute>
                             }
                         />

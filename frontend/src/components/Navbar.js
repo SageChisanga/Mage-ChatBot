@@ -27,6 +27,12 @@ const Navbar = () => {
                 <Box>
                     {user ? (
                         <>
+                            <Button color="inherit" onClick={() => navigate('/')}>
+                                Chat
+                            </Button>
+                            <Button color="inherit" onClick={() => navigate('/rules')}>
+                                Rules
+                            </Button>
                             <Typography variant="body1" component="span" sx={{ mr: 2 }}>
                                 Welcome, {user.username}
                             </Typography>
