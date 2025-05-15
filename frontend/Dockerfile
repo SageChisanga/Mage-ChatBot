@@ -10,7 +10,7 @@ COPY package*.json ./
 RUN npm install -g npm@latest \
     && npm config set fetch-retry-mintimeout 20000 \
     && npm config set fetch-retry-maxtimeout 120000 \
-    #&& npm install ajv@6.12.6 ajv-keywords@3.5.2 --legacy-peer-deps \
+    && npm install --save-dev ajv@^7 \
     && npm install --legacy-peer-deps \
     && npm cache clean --force
 
